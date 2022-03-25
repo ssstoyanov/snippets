@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  mongo:
+    image: mongo:latest
+    hostname: mongo
+    container_name: mongo
+    command: --auth
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "${MONGO_USER}"
+      MONGO_INITDB_ROOT_PASSWORD: "${MONGO_PASS}"
+    ports:
+      - 27017:27017
