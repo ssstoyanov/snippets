@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  server:
+    container_name: clickhouse
+    image: yandex/clickhouse-server:latest
+    restart: unless-stopped
+    environment:
+      CLICKHOUSE_PASSWORD: toor
+      CLICKHOUSE_USER: root
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+      - "9009:9009"
+    volumes:
+      - clickhouse:/var/lib/clickhouse
+
+volumes:
+  clickhouse:
+    driver: local
