@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+
+  mongo:
+    image: mongo:latest
+    hostname: mongo
+    container_name: mongo
+    command: --auth
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: toor
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo:/data/db
+
+volumes:
+  mongo:
+    driver: local
