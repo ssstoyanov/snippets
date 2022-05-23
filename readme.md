@@ -4,4 +4,5 @@
 - Mongodb
 - MySQL
 - Postegres
+- Postegres + Postgis
 - Clickhouse
