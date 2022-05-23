@@ -3,6 +3,6 @@
 - Kafka (and Zookeeper)
 - Mongodb
 - MySQL
-- Postegres
-- Postegres + Postgis
+- Postgres
+- Postgres + Postgis
 - Clickhouse
