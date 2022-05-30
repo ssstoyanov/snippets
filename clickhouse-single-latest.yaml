@@ -13,9 +13,3 @@ services:
       - "8123:8123"
       - "9000:9000"
       - "9009:9009"
-    volumes:
-      - clickhouse:/var/lib/clickhouse
-
-volumes:
-  clickhouse:
-    driver: local
