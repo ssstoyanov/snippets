@@ -7,8 +7,5 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_PASSWORD: toor # user postgres
-      PGDATA: /data/postgres
     ports:
       - "5432:5432"
-    volumes:
-      - ./postgres:/data/postgres
